@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск минимального и максимального числа</title>
+</head>
+<body>
+    <h1>Поиск минимального и максимального числа</h1>
+    <p class="all-elements"></p>
+    <button class="min">Найти минимальное число</button>
+    <button class="max">Найти максимальное число</button>
+    <p>Минимальное число: <span class="minNumber"></span></p>
+    <p>Максимальное число: <span class="maxNumber"></span></p>
+
+    <script>
+        // Массив чисел
+        const numbers = [12, 5, 8, 20, 3, 16];
+
+        // Выводим все элементы массива на страницу
+        const allElements = document.querySelector(".all-elements");
+        allElements.textContent = numbers.join(", ");
+
+        // Кнопки и элементы для вывода результата
+        const minButton = document.querySelector(".min");
+        const maxButton = document.querySelector(".max");
+        const minNumberSpan = document.querySelector(".minNumber");
+        const maxNumberSpan = document.querySelector(".maxNumber");
+
+        // Находим минимальное число
+        minButton.addEventListener("click", function() {
+            const minValue = Math.min(...numbers); // Используем Math.min для поиска
+            minNumberSpan.textContent = minValue; // Отображаем результат
+        });
+
+        // Находим максимальное число
+        maxButton.addEventListener("click", function() {
+            const maxValue = Math.max(...numbers); // Используем Math.max для поиска
+            maxNumberSpan.textContent = maxValue; // Отображаем результат
+        });
+    </script>
+</body>

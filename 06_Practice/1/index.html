@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список товаров</title>
+</head>
+<body>
+    <h1>Список товаров</h1>
+    <ul class="products">
+        <!-- Список товаров будет сгенерирован здесь -->
+    </ul>
+
+    <script>
+        // Исходный массив с товарами
+        const products = ["Мышка", "Клавиатура", "Наушники"];
+
+        // Новые товары, которые нужно добавить
+        const newProducts = ["Монитор", "Принтер", "Флешка"];
+
+        // Добавляем новые товары в исходный массив
+        products.push(...newProducts);
+
+        // Находим элемент ul для списка
+        const productsList = document.querySelector(".products");
+
+        // Генерируем элементы списка на основе массива
+        products.forEach(product => {
+            const listItem = document.createElement("li"); // Создаём элемент <li>
+            listItem.textContent = product; // Добавляем название товара
+            productsList.appendChild(listItem); // Добавляем элемент в список <ul>
+        });
+    </script>
+</body>
+</html>
