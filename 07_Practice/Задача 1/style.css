@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#add-book {
+    background-color: #2ecc71; 
+}
+
+#add-book:hover {
+    background-color: #27ae60; 
+}
+
+#search-book {
+    background-color: #3498db; 
+}
+
+#search-book:hover {
+    background-color: #2980b9; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+li.highlight {
+    background-color: #f1c40f; 
+    color: #fff;
+}

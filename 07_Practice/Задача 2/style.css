@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.controls button {
+  margin-right: 10px;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#add-height-btn {
+    background-color: #4CAF50; /* Зеленый */
+}
+
+#add-height-btn:hover {
+   background-color: #45a049; /* Зеленый темнее при наведении */
+}
+
+
+#filter-height-btn {
+    background-color: #FFA500; /* Оранжевый */
+}
+#filter-height-btn:hover{
+     background-color: #FF8C00; /* Оранжевый темнее при наведении */
+}
