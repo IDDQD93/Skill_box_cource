@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Задача 1: Подсчёт гласных букв</h3>
+    <script>
+        const countVowels = (word) => {
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            return [...word.toLowerCase()]
+                .filter(letter => vowels.includes(letter))
+                .length;
+        };
+
+        console.log(countVowels("Hello"));
+        console.log(countVowels("JavaScript"));
+        console.log(countVowels("WORLD"));
+
+
+
+    </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройка банковской карты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Настройка банковской карты</h1>
+        <div class="settings">
+           <div class="form-group">
+                <label for="cardText">Текст на карте:</label>
+                 <input type="text" id="cardText" name="cardText" placeholder="Введите текст">
+            </div>
+            <div class="form-group">
+                <label for="cardColor">Цвет карты:</label>
+                 <select id="cardColor" name="cardColor">
+                   <option value="red">Красный</option>
+                   <option value="blue">Синий</option>
+                   <option value="green">Зеленый</option>
+               </select>
+            </div>
+        </div>
+          <p id="card" class="card-preview">Ваша банковская карта</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
