@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .blockStyle {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+    </style>
+
+    <div class="galery">
+        <div class="first blockStyle"></div>
+        <div class="second blockStyle"></div>
+    </div>
+
+    <script>
+        const cats = ['../images/cat1.jpg', '../images/cat2.jpg', '../images/cat3.jpg']
+        const dogs = ['../images/dog1.jpg', '../images/dog2.jpg', '../images/dog3.jpg']
+
+        function getCatsImages() {
+
+            return new Promise((resolve) => {
+                const delay = Math.round(Math.random() * (5 - 2) + 2) * 1000
+                setTimeout(() => resolve(cats), delay)
+            })
+        }
+
+        function getDogsImages() {
+
+            return new Promise((resolve) => {
+                const delay = Math.round(Math.random() * (5 - 2) + 2) * 1000
+                setTimeout(() => resolve(dogs), delay)
+            })
+        }
+
+
+        function showPictures(picturesArr, galeryRow) {
+
+            picturesArr.forEach(picSrc => {
+                const galeryPic = document.createElement('img');
+                galeryPic.src = picSrc
+
+                galeryRow.append(galeryPic)
+            });
+        }
+
+
+        window.onload = () => {
+            const row1 = document.querySelector('.first');
+            const row2 = document.querySelector('.second');
+            row1.innerHTML = ''
+            row2.innerHTML = ''
+
+            getCatsImages()
+            .then((arr) => {
+                showPictures(arr, row1);
+            })
+
+            getDogsImages()
+            .then((arr) => {
+                showPictures(arr, row2);
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #progress-bar {
+            height: 20px;
+            max-width: 500px;
+            transform: scaleX(0);
+            background-color: blueviolet;
+            border-radius: 10px;
+            transform-origin: left;
+        }
+    </style>
+
+    <div id="progress-bar"></div>
+    <div id="progress-timer">0 с</div>
+
+    <script>
+
+        window.onload = () => {
+            const timeInSec = 4
+            progress(timeInSec)
+        }
+
+        function progress(time) {
+            const bar = document.getElementById('progress-bar')
+            const barTimer = document.getElementById('progress-timer')
+
+            let timer = 0
+
+            bar.style.transform = 'scaleX(1)'
+            bar.style.transition = `ease-in ${time}s`
+            
+            const interval = setInterval(() => {
+                timer++
+                barTimer.textContent = `${timer} с`;
+
+                if (timer >= time) {    
+                    clearInterval(interval);   
+                }
+            }, 1000);
+        }
+
+    </script>
+</body>
+
+</html>

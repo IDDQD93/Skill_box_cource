@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмотека</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Форма для добавления и редактирования фильмов -->
+    <div>
+        <label>Название: <input type="text" id="title"></label><br>
+        <label>Жанр: <input type="text" id="genre"></label><br>
+        <label>Год: <input type="number" id="year"></label><br>
+        <label>
+            <input type="checkbox" id="watched"> Успели посмотреть?
+        </label><br>
+        <button id="submit-btn" onclick="addMovie()">Добавить</button>
+        <button id="update-btn" onclick="updateMovie()" style="display: none;">Обновить</button>
+    </div>
+
+    <!-- Выпадающий список для сортировки -->
+    <div>
+        <label>Сортировать по: 
+            <select id="sort-criteria" onchange="sortMovies()">
+                <option value="title">Название</option>
+                <option value="genre">Жанр</option>
+                <option value="year">Год</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Таблица для отображения фильмов -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Жанр</th>
+                <th>Год</th>
+                <th>Успели посмотреть?</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <!-- Подключаем JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
